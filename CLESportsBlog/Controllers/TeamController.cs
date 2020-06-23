@@ -8,9 +8,9 @@ namespace CLESportsBlog.Controllers
 {
     public class TeamController : Controller
     {
-        public string Index()
+        public ViewResult Index()
         {
-            return "Hello World!";
+            return View();
         }
     }
 }
