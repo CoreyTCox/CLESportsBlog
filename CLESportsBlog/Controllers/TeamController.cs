@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using CLESportsBlog.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,9 @@ namespace CLESportsBlog.Controllers
     {
         public ViewResult Index()
         {
-            return View();
+            var model = new Team();
+            //model.name = name;
+            return View(model);
         }
     }
 }
