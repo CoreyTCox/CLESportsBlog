@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace CLESportsBlog.Repositories
 {
-    public class IRepository
+    public interface IRepository<T> where T : class
     {
+        public IEnumerable<T> GetAll();
+        void Create(T obj);
+        void Delete(T obj);
+        void Update(T obj);
+        T GetById(int id);
     }
 }

@@ -17,5 +17,9 @@ namespace CLESportsBlog.Models
             ImageLink = imageLink;
         }
 
+        public Team()
+        {
+
+        }
     }
 }
