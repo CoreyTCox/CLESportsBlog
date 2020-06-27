@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CLESportsBlog.Models;
 using CLESportsBlog.Repositories;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace CLESportsBlog.Controllers
 {
@@ -23,6 +24,26 @@ namespace CLESportsBlog.Controllers
 
             return View(model);
 
+        }
+
+        [HttpGet]
+
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+
+        public ActionResult Create(Content content)
+        {
+            if (ModelState.IsValid)
+            {
+                contentRepo.Create(content);
+                return RedirectToAction("Index");
+            }
+
+            return View(content);
         }
     }
 }

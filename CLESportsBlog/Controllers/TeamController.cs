@@ -27,5 +27,6 @@ namespace CLESportsBlog.Controllers
             var model = teamRepo.GetById(id);
             return View(model);
         }
+
     }
 }
