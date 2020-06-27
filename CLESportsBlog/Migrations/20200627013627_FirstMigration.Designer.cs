@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CLESportsBlog.Migrations
 {
     [DbContext(typeof(TeamContext))]
-    [Migration("20200626225500_FirstMigration")]
+    [Migration("20200627013627_FirstMigration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,7 +53,7 @@ namespace CLESportsBlog.Migrations
                             Id = 1,
                             Author = "Lebron",
                             Body = "Cavs Post",
-                            PublishDate = new DateTime(2020, 6, 26, 18, 54, 59, 187, DateTimeKind.Local).AddTicks(7616),
+                            PublishDate = new DateTime(2020, 6, 26, 21, 36, 26, 632, DateTimeKind.Local).AddTicks(1931),
                             TeamId = 1,
                             Title = "Cavs"
                         },
@@ -62,7 +62,7 @@ namespace CLESportsBlog.Migrations
                             Id = 2,
                             Author = "Lindor",
                             Body = "Indinas Post",
-                            PublishDate = new DateTime(2020, 6, 26, 18, 54, 59, 191, DateTimeKind.Local).AddTicks(8370),
+                            PublishDate = new DateTime(2020, 6, 26, 21, 36, 26, 636, DateTimeKind.Local).AddTicks(4640),
                             TeamId = 2,
                             Title = "Indians"
                         },
@@ -71,7 +71,7 @@ namespace CLESportsBlog.Migrations
                             Id = 3,
                             Author = "Kosar",
                             Body = "Browns Post",
-                            PublishDate = new DateTime(2020, 6, 26, 18, 54, 59, 191, DateTimeKind.Local).AddTicks(8530),
+                            PublishDate = new DateTime(2020, 6, 26, 21, 36, 26, 636, DateTimeKind.Local).AddTicks(4763),
                             TeamId = 3,
                             Title = "Browns"
                         });

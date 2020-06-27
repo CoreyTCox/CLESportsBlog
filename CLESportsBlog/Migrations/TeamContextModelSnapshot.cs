@@ -51,7 +51,7 @@ namespace CLESportsBlog.Migrations
                             Id = 1,
                             Author = "Lebron",
                             Body = "Cavs Post",
-                            PublishDate = new DateTime(2020, 6, 26, 19, 26, 55, 677, DateTimeKind.Local).AddTicks(8823),
+                            PublishDate = new DateTime(2020, 6, 26, 21, 36, 26, 632, DateTimeKind.Local).AddTicks(1931),
                             TeamId = 1,
                             Title = "Cavs"
                         },
@@ -60,7 +60,7 @@ namespace CLESportsBlog.Migrations
                             Id = 2,
                             Author = "Lindor",
                             Body = "Indinas Post",
-                            PublishDate = new DateTime(2020, 6, 26, 19, 26, 55, 682, DateTimeKind.Local).AddTicks(351),
+                            PublishDate = new DateTime(2020, 6, 26, 21, 36, 26, 636, DateTimeKind.Local).AddTicks(4640),
                             TeamId = 2,
                             Title = "Indians"
                         },
@@ -69,7 +69,7 @@ namespace CLESportsBlog.Migrations
                             Id = 3,
                             Author = "Kosar",
                             Body = "Browns Post",
-                            PublishDate = new DateTime(2020, 6, 26, 19, 26, 55, 682, DateTimeKind.Local).AddTicks(430),
+                            PublishDate = new DateTime(2020, 6, 26, 21, 36, 26, 636, DateTimeKind.Local).AddTicks(4763),
                             TeamId = 3,
                             Title = "Browns"
                         });

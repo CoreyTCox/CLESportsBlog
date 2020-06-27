@@ -15,7 +15,7 @@ namespace CLESportsBlog
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=Restaurants;Trusted_Connection=True;";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=CLESportsBlog;Trusted_Connection=True;";
 
             optionsBuilder.UseSqlServer(connectionString)
                 .UseLazyLoadingProxies();
@@ -73,8 +73,6 @@ namespace CLESportsBlog
                 PublishDate = DateTime.Now,
                 TeamId = 3
             });
-
-
             
             base.OnModelCreating(modelBuilder);
         }

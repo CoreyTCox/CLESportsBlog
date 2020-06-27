@@ -43,9 +43,9 @@ namespace CLESportsBlog.Migrations
                 columns: new[] { "Id", "Author", "Body", "PublishDate", "TeamId", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Lebron", "Cavs Post", new DateTime(2020, 6, 26, 18, 54, 59, 187, DateTimeKind.Local).AddTicks(7616), 1, "Cavs" },
-                    { 2, "Lindor", "Indinas Post", new DateTime(2020, 6, 26, 18, 54, 59, 191, DateTimeKind.Local).AddTicks(8370), 2, "Indians" },
-                    { 3, "Kosar", "Browns Post", new DateTime(2020, 6, 26, 18, 54, 59, 191, DateTimeKind.Local).AddTicks(8530), 3, "Browns" }
+                    { 1, "Lebron", "Cavs Post", new DateTime(2020, 6, 26, 21, 36, 26, 632, DateTimeKind.Local).AddTicks(1931), 1, "Cavs" },
+                    { 2, "Lindor", "Indinas Post", new DateTime(2020, 6, 26, 21, 36, 26, 636, DateTimeKind.Local).AddTicks(4640), 2, "Indians" },
+                    { 3, "Kosar", "Browns Post", new DateTime(2020, 6, 26, 21, 36, 26, 636, DateTimeKind.Local).AddTicks(4763), 3, "Browns" }
                 });
 
             migrationBuilder.InsertData(

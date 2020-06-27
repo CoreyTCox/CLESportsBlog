@@ -5,13 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200626225906_FilledRepositories.cs" />
-    <Compile Remove="Migrations\20200626225906_FilledRepositories.Designer.cs" />
-    <Compile Remove="Migrations\20200627005228_PopulatedSeedData.cs" />
-    <Compile Remove="Migrations\20200627005228_PopulatedSeedData.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
