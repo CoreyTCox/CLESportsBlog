@@ -11,10 +11,11 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>CLE Sports Blog</h1>
+    <h1>Cleveland Sports Blog</h1>
+    <h2>Choose Your Favorite CLE Team</h2>
     @foreach (var team in Model)
     {
-        <h3><a href="/Team/Details/@team.Id">@team.Name</a></h3>
+        <a href="/Team/Details/@team.Id"><img src="@team.ImageLink" alt="@team.Name" style="width: 50px; height: auto;"/></a>
 
     }
 </body>
