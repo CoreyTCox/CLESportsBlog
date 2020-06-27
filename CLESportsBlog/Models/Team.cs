@@ -10,6 +10,8 @@ namespace CLESportsBlog.Models
         public string Name { get; set; }
         public int Id { get; set; }
         public string ImageLink { get; set; }
+        public virtual ICollection<Content> Contents { get; set; }
+
         public Team(string name, int id, string imageLink)
         {
             Name = name;
@@ -17,7 +19,6 @@ namespace CLESportsBlog.Models
             ImageLink = imageLink;
         }
 
-        //public virtual ICollection<Content> Content { get; set; }
 
         public Team()
         {

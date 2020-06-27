@@ -21,5 +21,11 @@ namespace CLESportsBlog.Controllers
             var model = teamRepo.GetAll();            
             return View(model);
         }
+
+        public ViewResult Details(int id)
+        {
+            var model = teamRepo.GetById(id);
+            return View(model);
+        }
     }
 }

@@ -12,6 +12,10 @@
 </head>
 <body>
     <h1>CLE Sports Blog</h1>
-    <a href="/Team/Index/@Model.Id"
+    @foreach (var team in Model)
+    {
+        <h3><a href="/Team/Details/@team.Id">@team.Name</a></h3>
+
+    }
 </body>
 </html>
