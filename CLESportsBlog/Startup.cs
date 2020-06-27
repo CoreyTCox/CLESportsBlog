@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CLESportsBlog.Models;
+using CLESportsBlog.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -25,6 +27,9 @@ namespace CLESportsBlog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<TeamContext>();
+            services.AddScoped<IRepository<Team>, TeamRepository>();
+            services.AddScoped<IRepository<Content>, ContentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
