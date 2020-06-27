@@ -24,5 +24,12 @@ namespace CLESportsBlog.Controllers
             return View(model);
 
         }
+
+        public ViewResult Index(int teamId)
+        {
+            var model = contentRepo.GetById(teamId);
+
+            return View(model);
+        }
     }
 }
