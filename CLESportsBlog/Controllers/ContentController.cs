@@ -40,7 +40,38 @@ namespace CLESportsBlog.Controllers
             if (ModelState.IsValid)
             {
                 contentRepo.Create(content);
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Team", new {id = content.TeamId});
+            }
+
+            return View(content);
+        }
+
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Content content = contentRepo.GetById(id);
+            return View(content);
+        }
+
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            Content content = contentRepo.GetById(id);
+            return View(content);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Content content)
+        {
+
+            if (ModelState.IsValid)
+            {
+                int teamId = content.TeamId;
+
+                contentRepo.Delete(content);
+
+                return RedirectToAction("Details", "Team", new { id = teamId });
             }
 
             return View(content);
