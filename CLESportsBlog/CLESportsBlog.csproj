@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200626225906_FilledRepositories.cs" />
     <Compile Remove="Migrations\20200626225906_FilledRepositories.Designer.cs" />
+    <Compile Remove="Migrations\20200627005228_PopulatedSeedData.cs" />
+    <Compile Remove="Migrations\20200627005228_PopulatedSeedData.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +21,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
     <PackageReference Include="NEST" Version="7.8.0" />
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
   </ItemGroup>
 
 </Project>

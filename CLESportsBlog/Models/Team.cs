@@ -17,6 +17,8 @@ namespace CLESportsBlog.Models
             ImageLink = imageLink;
         }
 
+        //public virtual ICollection<Content> Content { get; set; }
+
         public Team()
         {
 
