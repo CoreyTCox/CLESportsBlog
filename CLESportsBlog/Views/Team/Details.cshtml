@@ -13,7 +13,7 @@
 <body>
     <h1>@Model.Name Posts</h1>
 
-    <a href="/Content/Create">Add Post</a>
+    <a href="/Content/CreateByTeamId/@Model.Id">Add Post</a>
 
     @foreach (var content in Model.Contents)
     {

@@ -28,7 +28,7 @@ namespace CLESportsBlog.Controllers
 
         [HttpGet]
 
-        public ViewResult Create(int id)
+        public ViewResult CreateByTeamId(int id)
         {
             ViewBag.TeamId = id;
             return View();
