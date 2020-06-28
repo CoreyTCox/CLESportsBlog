@@ -24,10 +24,10 @@ namespace CLESportsBlog.Repositories
             return db.Teams.Single(c => c.Id == id);
         }
 
-        public int Count()
-        {
-            return db.Contents.Count();
-        }
+        //public int Count()
+        //{
+        //    return db.Contents.Count();
+        //}
 
         public void Create(Team team)
         {

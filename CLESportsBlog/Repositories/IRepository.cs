@@ -7,7 +7,7 @@ namespace CLESportsBlog.Repositories
 {
     public interface IRepository<T> where T : class
     {
-        public IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll();
         void Create(T obj);
         void Delete(T obj);
         void Update(T obj);

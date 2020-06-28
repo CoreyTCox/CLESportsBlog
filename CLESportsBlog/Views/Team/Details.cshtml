@@ -1,0 +1,28 @@
+﻿@model CLESportsBlog.Models.Team
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h1>@Model.Name Posts</h1>
+
+    <a href="/Content/CreateByTeamId/@Model.Id">Add Post</a>
+
+    @foreach (var content in Model.Contents)
+    {
+        <h2>@content.Title</h2>
+        <p>@content.Body</p>
+        <h3>@content.Author</h3>
+        <p>@content.PublishDate</p>
+    }
+    <a href="/Team/Index/">Back to Main</a>
+
+</body>
+</html>
