@@ -30,19 +30,19 @@ namespace CLESportsBlog
             {
                 Name = "Cavs",
                 Id = 1,
-                ImageLink = "./images/cavslogo.png"
+                ImageLink = "/images/cavslogo.png"
             },
             new Team
             {
                 Name = "Indians",
                 Id = 2,
-                ImageLink = "./images/indianslogo.png"
+                ImageLink = "/images/indianslogo.png"
             },
             new Team
             {
                 Name = "Browns",
                 Id = 3,
-                ImageLink = "./images/brownslogo.png"
+                ImageLink = "/images/brownslogo.png"
             });
 
             modelBuilder.Entity<Content>().HasData(

@@ -33,7 +33,7 @@ namespace CLESportsBlog.Models
 
         public Content()
         {
-
+            PublishDate = DateTime.Now;
         }
 
         
