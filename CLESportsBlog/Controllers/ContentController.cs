@@ -50,7 +50,19 @@ namespace CLESportsBlog.Controllers
         [HttpGet]
         public ViewResult Update(int id)
         {
+            //ViewBag.TeamId = id;
             Content content = contentRepo.GetById(id);
+            return View(content);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Content content)
+        {
+            if (ModelState.IsValid)
+            {
+                contentRepo.Update(content);
+                return RedirectToAction("Details", "Team", new { id = content.TeamId });
+            }
             return View(content);
         }
 
