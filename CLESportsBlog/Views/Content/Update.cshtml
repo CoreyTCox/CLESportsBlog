@@ -24,17 +24,19 @@
                 <div class="form-group">
                     <input type="hidden" asp-for="TeamId" class="form-control" value=@ViewBag.TeamId />
                 </div>
-
+                <br/>
                 <div class="form-group">
                     <label asp-for="Title" class="control-label"></label>
                     <input asp-for="Title" class="form-control" />
                     <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
+                <br/>
                 <div class="form-group">
                     <label asp-for="Body" class="control-label"></label>
                     <input asp-for="Body" class="form-control" />
                     <span asp-validation-for="Body" class="text-danger"></span>
                 </div>
+                <br />
                 @*<div class="form-group">
             <label asp-for="Author" class="control-label"></label>
             <input asp-for="Author" class="form-control" />
@@ -53,6 +55,8 @@
                 <div class="form-group">
                     <input type="submit" value="Edit" class="btn btn-primary" />
                 </div>
+                <br />
+                <br />
             </form>
         </div>
     </div>
