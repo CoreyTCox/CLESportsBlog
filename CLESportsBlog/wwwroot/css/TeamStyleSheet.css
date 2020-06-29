@@ -1,5 +1,4 @@
 ﻿body {
-    text-decoration: none;
     margin: 0 1em;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +28,7 @@ main {
 
 p {
     border: 5px solid black;
-    border-radius: 15px;
+    border-radius: 15px 15px 15px 0;
     padding: 1em 1em;
     margin: 0 1em;
     background-color: whitesmoke;
@@ -37,20 +36,21 @@ p {
 }
 
 #contentActions {
-    margin: .5em 1em;
-    text-decoration: none;
+    padding: .5em 1em;
+    font-weight: 900;
 }
 
     #contentActions a {
         text-decoration: none;
-        color: black;
+        color: whitesmoke;
         font-weight: 900;
+        background-color: black;
+        padding: .5em 1.5em;
+        /*border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;*/
+        border-radius: 0 0 15px 15px;
+        opacity: .9;
     }
-
-        #contentActions a :hover {
-            background-color: rgb(10, 10, 10);
-            border-radius: 15px;
-        }
 
 #headerText {
     text-align: center;
@@ -79,7 +79,7 @@ p {
 nav {
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 2.5em;
     display: flex;
     flex-flow: column;
@@ -97,7 +97,8 @@ nav {
     }
 
         nav a :hover {
-            background-color: rgb(10, 10, 10);
+            color: whitesmoke;
+            background-color: black;
             box-sizing: content-box;
             border-radius: 5px;
         }
