@@ -1,0 +1,64 @@
+﻿@model CLESportsBlog.Models.Content
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+    <link href="~/css/DeleteStyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <h1>Remove Post</h1>
+    <div>
+        <h3>Are you sure you want to delete this?</h3>
+        <hr />
+        <form asp-action="Delete">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Title):
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Body):
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Body)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Author):
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Author)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PublishDate):
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PublishDate)
+                </dd>
+            </dl>
+
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="@Model.Title" />
+            <input type="hidden" asp-for="@Model.Author" />
+            <input type="hidden" asp-for="@Model.Body" />
+            <input type="hidden" asp-for="@Model.TeamId" />
+            <input type="submit" value="Remove" class="btn btn-danger" />
+            <br />
+
+            <a asp-action="Details" asp-controller="Team" asp-route-id="@Model.TeamId">Back to Posts</a>
+        </form>
+    </div>
+</body>
+</html>

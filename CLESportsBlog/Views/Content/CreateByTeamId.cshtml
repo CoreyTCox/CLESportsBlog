@@ -1,0 +1,61 @@
+﻿@model CLESportsBlog.Models.Content
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link href="~/css/CreateStyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <h1>Add a Post</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <input type="hidden" asp-for="TeamId" class="form-control" value=@ViewBag.TeamId />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label asp-for="Body" class="control-label"></label>
+                    <input asp-for="Body" class="form-control" />
+                    <span asp-validation-for="Body" class="text-danger"></span>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label asp-for="Author" class="control-label"></label>
+                    <input asp-for="Author" class="form-control" />
+                    <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <input type="submit" value="Post" class="btn btn-primary" />
+                </div>
+                <br/>
+                <br/>
+            </form>
+        </div>
+    </div>
+    
+    <div>
+        <a asp-action="Details" asp-controller="Team" asp-route-id="@ViewBag.TeamId">Back to Posts</a>
+    </div>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<CLESportsBlog.Models.Team>
 @{
     Layout = null;
 }
@@ -9,8 +9,24 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/css/TeamStyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>CLE Sports Blog</h1>
+
+    <header>
+        <div id="headerText">
+            <h1>CLE Sports Blog</h1>
+            <h2>Choose Your Favorite Cleveland Sports Team</h2>
+        </div>
+    </header>
+
+    <section id="ChooseTeam">
+
+        @foreach (var team in Model)
+        {
+            <a href="/Team/Details/@team.Id"><img src="@team.ImageLink" alt="@team.Name" style="width: 400px; height: 400px;" /></a>
+        }
+
+    </section>
 </body>
 </html>
