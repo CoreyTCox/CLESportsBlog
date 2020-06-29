@@ -1,2 +1,27 @@
 ﻿body {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('/images/CLE Skyline.jpg');
+    background-size: cover;
+    font-family: 'Courier New';
+    font-size: 1.618em;
+}
+
+#headerText {
+    text-align: center;
+    font-weight: bold;
+}
+
+#ChooseTeam {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#ChooseTeam a :hover {
+    background-color: whitesmoke;
+    box-sizing: content-box;
 }
