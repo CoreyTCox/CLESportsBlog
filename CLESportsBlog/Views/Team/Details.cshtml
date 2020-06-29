@@ -20,16 +20,16 @@
     <main>
         @foreach (var content in Model.Contents)
         {
-            <div id="content-info">
+            <div id="contentInfo">
                 <h2>@content.Title</h2>
                 <h3>By: @content.Author</h3>
             </div>
 
-            <div id="content-body">
+            <div id="contentBody">
                 <p>@content.Body<br /><br />@content.PublishDate</p>               
             </div>
 
-            <div id="content-actions">
+            <div id="contentActions">
                 <a href="/Content/Update/@content.Id">Edit</a>
                 <a href="/Content/Delete/@content.Id">Remove</a>
             </div>
