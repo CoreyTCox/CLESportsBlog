@@ -14,7 +14,21 @@
     background-color: whitesmoke;
 }
 
+a {
+    text-decoration: none;
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 1px;
+    margin-bottom: 1em;
+}
 
+form {
+    text-align: center;
+    background-color: whitesmoke;
+    opacity: .8;
+    padding-right: 1.5em;
+}
 #headerText {
     text-align: center;
     font-weight: bold;
@@ -50,7 +64,7 @@ h2 {
 }
 
 h3 {
-    margin: 0 0 1em;
+    margin: 0 0;
 }
 
 main {
@@ -66,55 +80,3 @@ p {
     opacity: .9;
 }
 
-#contentActions {
-    padding: .5em 1em;
-    font-weight: 900;
-}
-
-    #contentActions a {
-        text-decoration: none;
-        color: whitesmoke;
-        font-weight: 900;
-        background-color: black;
-        padding: .5em 1.5em;
-        border-radius: 0 0 15px 15px;
-        opacity: .9;
-    }
-
-
-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 125px;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    background: black;
-    border-radius: 5px;
-    border: 3px solid;
-    opacity: .8;
-}
-
-    nav a {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        background-color: whitesmoke;
-    }
-
-        nav a :hover {
-            background-color: whitesmoke;
-            box-sizing: content-box;
-        }
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    width: auto;
-    height: auto;
-    justify-content: center;
-    opacity: .5;
-}
