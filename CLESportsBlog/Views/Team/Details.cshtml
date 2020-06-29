@@ -9,26 +9,38 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
-    <link href="~/css/DetailsStyleSheet.css" rel="stylesheet" />
+    <link href="~/css/TeamStyleSheet.css" rel="stylesheet" />
 
 </head>
 <body>
-    <h1>@Model.Name Posts</h1>
+    <section id="top">
+        <h1>@Model.Name Posts</h1>
+    </section>
 
-    <a href="/Content/CreateByTeamId/@Model.Id">Add Post</a>
+    <main>
+        @foreach (var content in Model.Contents)
+        {
+            <div id="content-info">
+                <h2>@content.Title</h2>
+                <h3>By: @content.Author</h3>
+            </div>
 
-    @foreach (var content in Model.Contents)
-    {
-        <h2>@content.Title</h2>
-        <h3>By: @content.Author</h3>
-        <p>@content.Body</p>
-        <p>@content.PublishDate</p>
-        <a href="/Content/Update/@content.Id">Edit Post</a>
-        <a href="/Content/Delete/@content.Id">Remove Post</a>
-    }
-    <br />
-    <br />
-    <a href="/Team/Index/">Back to Main</a>
+            <div id="content-body">
+                <p>@content.Body<br /><br />@content.PublishDate</p>               
+            </div>
+
+            <div id="content-actions">
+                <a href="/Content/Update/@content.Id">Edit</a>
+                <a href="/Content/Delete/@content.Id">Remove</a>
+            </div>
+        }
+    </main>
+
+    <nav>
+        <a href="/Content/CreateByTeamId/@Model.Id">Add Post</a>
+        <a href="#top">Top</a>
+        <a href="/Team/Index/">Home</a>
+    </nav>
 
 
 </body>
