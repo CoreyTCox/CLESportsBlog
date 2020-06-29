@@ -1,0 +1,48 @@
+﻿body {
+    margin: 0 1em;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('/images/The Q.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Courier New';
+    font-size: 1.2em;
+    min-width: 600px;
+    text-align: center;
+    padding: 1em 0;
+}
+
+a {
+    text-decoration: none;
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bold;
+    padding: .5em;
+    border: 2px solid;
+}
+h1 {
+    background-color: whitesmoke;
+}
+
+h2 {
+    border-bottom: 4px solid;
+    margin: 1em 0 0;
+}
+
+label {
+    background-color: whitesmoke;
+    font-weight: bold;
+    padding: .25em;
+    border: 1px solid;
+    margin: 1em 0 0 1em;
+}
+
+input {
+    line-height: 1.618em;
+}
+
+input [type=submit] {
+    width: 400px;
+    height: 75px;
+}
