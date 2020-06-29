@@ -50,7 +50,6 @@ namespace CLESportsBlog.Controllers
         [HttpGet]
         public ViewResult Update(int id)
         {
-            //ViewBag.TeamId = id;
             Content content = contentRepo.GetById(id);
             return View(content);
         }

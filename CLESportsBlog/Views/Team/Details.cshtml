@@ -18,12 +18,14 @@
     @foreach (var content in Model.Contents)
     {
         <h2>@content.Title</h2>
+        <h3>By: @content.Author</h3>
         <p>@content.Body</p>
-        <h3>@content.Author</h3>
         <p>@content.PublishDate</p>
-        <a href="/Content/Update/@Model.Id">Edit Post</a>
-        <a href="/Content/Delete/@Model.Id">Remove Post</a>
+        <a href="/Content/Update/@content.Id">Edit Post</a>
+        <a href="/Content/Delete/@content.Id">Remove Post</a>
     }
+    <br />
+    <br />
     <a href="/Team/Index/">Back to Main</a>
 
 
