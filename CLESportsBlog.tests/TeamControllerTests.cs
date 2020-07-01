@@ -5,6 +5,7 @@ using System;
 using Xunit;
 using NSubstitute;
 using CLESportsBlog.Repositories;
+using System.Collections.Generic;
 
 namespace CLESportsBlog.Tests
 {
@@ -27,13 +28,14 @@ namespace CLESportsBlog.Tests
             Assert.IsType<ViewResult>(result);
         }
 
-        //[Fact]
-        //public void Index_Passes_TeamModel_To_View()
-        //{            
+        [Fact]
+        public void Index_Passes_All_Teams_To_View()
+        {
+            List<Team> teamList = new List<Team>();
+            mockTeamRepo.GetAll().Returns(teamList);
+            var result = underTest.Index();
 
-        //    var result = underTest.Index();
-
-        //    Assert.IsType<Team>(result.Model);
-        //}
+            Assert.Equal(teamList, result.Model);
+        }
     }
 }

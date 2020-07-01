@@ -40,32 +40,14 @@ namespace CLESportsBlog.Tests
             Assert.Equal(expectedContent, result.Model);
         }
 
-        //[Fact]
-        //public void Details_Returns_A_View()
-        //{
-        //    var result = underTest.Details(1);
+        [Fact]
+        public void CreateByTeamId_Returns_a_ViewResult()
+        {
+            
+            var result = underTest.CreateByTeamId(1);
 
-        //    Assert.IsType<ViewResult>(result);
-        //}
-
-        //[Fact]
-        //public void Details_Passes_ContentModel_To_View()
-        //{
-        //    var expectedContent = new Content();
-        //    contentRepo.GetById(1).Returns(expectedContent);
-
-        //    var result = underTest.Details(1);
-
-        //    Assert.Equal(expectedContent, result.Model);
-        //}
-
-        //[Fact]
-        //public void Create_Returns_a_ViewResult()
-        //{
-        //    var result = underTest.Create();
-
-        //    Assert.IsType<ViewResult>(result);
-        //}
+            Assert.IsType<ViewResult>(result);
+        }
 
         [Fact]
         public void Create_Post_Returns_ActionResult()
@@ -89,12 +71,27 @@ namespace CLESportsBlog.Tests
         [Fact]
         public void Create_Will_Add_Course_if_Valid_ModelState()
         {
-            var newCourse = new Content();
+            var newContent = new Content();
 
-            underTest.Create(newCourse);
+            underTest.Create(newContent);
 
-            contentRepo.Received().Create(newCourse);
+            contentRepo.Received().Create(newContent);
 
         }
+
+        [Fact]
+        public
+
+        [Fact]
+        public void Delete_Removes_Content()
+        {
+            var content = new Content() { Title = "New Post" };
+            underTest.Create(content);
+
+            underTest.Delete(content);
+
+            contentRepo.Received().Delete(content);
+        }
+
     }
 }
