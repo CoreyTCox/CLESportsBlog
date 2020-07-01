@@ -80,7 +80,15 @@ namespace CLESportsBlog.Tests
         }
 
         [Fact]
-        public
+        public void Update_Edits_Content()
+        {
+            var content = new Content() { Title = "New Post" };
+            underTest.Create(content);
+
+            underTest.Update(content);
+
+            contentRepo.Received().Update(content);
+        }
 
         [Fact]
         public void Delete_Removes_Content()
