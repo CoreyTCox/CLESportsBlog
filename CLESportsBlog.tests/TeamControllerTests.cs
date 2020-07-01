@@ -27,13 +27,13 @@ namespace CLESportsBlog.Tests
             Assert.IsType<ViewResult>(result);
         }
 
-        [Fact]
-        public void Index_Passes_TeamModel_To_View()
-        {            
+        //[Fact]
+        //public void Index_Passes_TeamModel_To_View()
+        //{            
 
-            var result = underTest.Index();
+        //    var result = underTest.Index();
 
-            Assert.IsType<Team>(result.Model);
-        }
+        //    Assert.IsType<Team>(result.Model);
+        //}
     }
 }

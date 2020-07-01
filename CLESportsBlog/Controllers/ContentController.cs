@@ -54,6 +54,11 @@ namespace CLESportsBlog.Controllers
             return View(content);
         }
 
+        //public object Details(int v)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         [HttpPost]
         public ActionResult Update(Content content)
         {
@@ -65,6 +70,10 @@ namespace CLESportsBlog.Controllers
             return View(content);
         }
 
+        //public object Create()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         [HttpGet]
         public ViewResult Delete(int id)
