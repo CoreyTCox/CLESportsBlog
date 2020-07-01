@@ -25,11 +25,6 @@ namespace CLESportsBlog.Repositories
             return db.Contents.Single(c => c.Id == id);
         }
 
-        //public int Count()
-        //{
-        //    return db.Contents.Count();
-        //}
-
         public void Create(Content content)
         {
             db.Contents.Add(content);
